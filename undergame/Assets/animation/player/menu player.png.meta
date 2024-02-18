@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: bf964200f18181d42b3548011a1527ac
+guid: 1b413f2982b4df8468a544fdf30926ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8180696743091580290
-    second: run_up_anim_0
+      213: -3923780874584688070
+    second: 1464142487_chara+friskspritesheet_0
   - first:
-      213: 6249665990723937201
-    second: run_up_anim_1
+      213: -10969397164730482
+    second: 1464142487_chara+friskspritesheet_1
   - first:
-      213: -6114821147051174251
-    second: run_up_anim_2
+      213: 30175688173970913
+    second: 1464142487_chara+friskspritesheet_2
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -90,7 +90,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -103,7 +103,20 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Standalone
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -132,12 +145,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: run_up_anim_0
+      name: menu player_0
       rect:
         serializedVersion: 2
-        x: 270
-        y: 180
-        width: 28
+        x: 301
+        y: 315
+        width: 29
         height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -146,50 +159,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28d2b2b385ca78170800000000000000
-      internalID: 8180696743091580290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run_up_anim_1
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 180
-        width: 28
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b3a0fd3b164bb650800000000000000
-      internalID: 6249665990723937201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run_up_anim_2
-      rect:
-        serializedVersion: 2
-        x: 331
-        y: 180
-        width: 28
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 596d7f0809ac32ba0800000000000000
-      internalID: -6114821147051174251
+      spriteID: 2571eac153b5a65429fc0e562cbadf05
+      internalID: 938650063
       vertices: []
       indices: 
       edges: []
@@ -197,7 +168,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 14c4248bc9a830c4390bccb4ab65bdc8
+    spriteID: b8cb9818f4876974e87f9407dd9a9385
     internalID: 0
     vertices: []
     indices: 
@@ -205,9 +176,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      run_up_anim_0: 8180696743091580290
-      run_up_anim_1: 6249665990723937201
-      run_up_anim_2: -6114821147051174251
+      1464142487_chara+friskspritesheet_0: -3923780874584688070
+      1464142487_chara+friskspritesheet_1: -10969397164730482
+      1464142487_chara+friskspritesheet_2: 30175688173970913
+      menu player_0: 938650063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
