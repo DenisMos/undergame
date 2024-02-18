@@ -24,25 +24,33 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity /= 3;
 
-        if(moveHorizontal > 0)
+        if(moveHorizontal > 0 && moveVertical == 0)
         {
-            animator.Play("run_right_anim");
+            animator.Play("run_right_anim_cfg");
         }
-        if (moveHorizontal < 0)
+        if (moveHorizontal < 0 && moveVertical == 0)
         {
-            animator.Play("run_left_anim");
+            animator.Play("run_left_anim_cfg");
         }
-        if (moveVertical > 0) 
+        if (moveVertical > 0 && moveHorizontal == 0) 
         {
-            animator.Play("run_up_anim");
+            animator.Play("run_up_anim_cfg");
         }
-        if(moveVertical < 0)
+        if(moveVertical < 0 && moveHorizontal == 0)
         {
-            animator.Play("run_down_anim");
+            animator.Play("move");
         }
         if (moveVertical == 0 && moveHorizontal == 0)
         {
             animator.Play("run_idle");
         }
+        if (moveVertical < 0)
+        {
+            if (moveHorizontal > 0)
+            {
+                animator.Play("move");
+            }
+        }
+        
     }
 }
