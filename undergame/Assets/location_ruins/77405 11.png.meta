@@ -1327,8 +1327,8 @@ TextureImporter:
         y: 600
         width: 60
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.47205004, y: 0.45108795}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2264,6 +2264,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 77405 11_102
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 600
+        width: 20
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17152527ef350948a4a5e0d8ff644bd
+      internalID: -1468445821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -2280,6 +2301,7 @@ TextureImporter:
       77405 11_10: 1331635580
       77405 11_100: 1776068173
       77405 11_101: 1021351683
+      77405 11_102: -1468445821
       77405 11_11: -1287448971
       77405 11_12: -196920643
       77405 11_13: 1966364532
