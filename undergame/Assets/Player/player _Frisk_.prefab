@@ -255,8 +255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0b0451bce37264d90cbb48b12af60b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  animator: {fileID: 6734818538219017657}
+  spriteRenderer: {fileID: 1970261398285989215}
   stayRightSprite: {fileID: 0}
 --- !u!60 &3478551430174000427
 PolygonCollider2D:
