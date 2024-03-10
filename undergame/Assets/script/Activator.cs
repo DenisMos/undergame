@@ -17,15 +17,15 @@ public class Activator : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Q))
         {
-            Dialow.color = Color.blue;
+            Dialow.colorText = Color.blue;
             Dialow.Speed = 0.01f;
-            Dialow.SetText("Нажал кнопку Q");
+            Dialow.ShowText("Нажал кнопку Q");
         }
         if (Input.GetKeyUp(KeyCode.P))
         {
-            Dialow.color = Color.yellow;
+            Dialow.colorText = Color.yellow;
             Dialow.Speed = 1f;
-            Dialow.SetText("Нажал кнопку P");
+            Dialow.ShowText("Нажал кнопку P");
         }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,21 +11,20 @@ public class dialow : MonoBehaviour
 
     public int pointer;
     public float Speed = 1;
-    public Color color = Color.red;
-
+    public Color colorText = Color.black;
     public Text dialogs;
+    public GameObject dialogPanel;
     // Start is called before the first frame update
     void Start()
     {
-        //dialogs.text = "HOULOHUOI";
-        messet = "ghbdytn";
-        pointer = 0;
-        StartCoroutine(nameof(sendtext));
+       StopText();
     }
 
-    public void SetText(string message)
+    public void ShowText(string message)
     { 
         StopAllCoroutines();
+
+        dialogPanel.SetActive(true);
 
         messet = message;
         dialogs.text = string.Empty;
@@ -34,13 +34,21 @@ public class dialow : MonoBehaviour
         StartCoroutine(nameof(sendtext));
     }
 
+    public void StopText()
+    {
+        StopAllCoroutines();
+
+        dialogs.text = string.Empty;
+
+        dialogPanel.SetActive(false);
+    }
+
     public IEnumerator sendtext()
     {
         yield return new WaitForSeconds(Speed);
         if (pointer < messet.Length)
         {
             dialogs.text += messet[pointer];     
-            dialogs.color = color;
             pointer++;
 
             StartCoroutine(nameof(sendtext));
