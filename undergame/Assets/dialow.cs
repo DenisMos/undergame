@@ -14,6 +14,7 @@ public class dialow : MonoBehaviour
     public int pointer;
     public float Speed = 1;
     public Color colorText = Color.black;
+    public Image pert;
     public Text dialogs;
     public GameObject dialogPanel;
     // Start is called before the first frame update

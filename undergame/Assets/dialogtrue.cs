@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 
 public class dialogtrue : MonoBehaviour
 {
     public dialow fer;
     private bool _stay;
+    public Color color=Color.blue;
+    public Font font;
      
     // Start is called before the first frame update
     void Start()
@@ -28,7 +26,9 @@ public class dialogtrue : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        fer.ShowText("нектозоветвас|привет Михаил");
+        fer.dialogs.font = font;
+        fer.pert.color = color;
+        fer.ShowText("некто зовет вас|привет Михаил");
         _stay = true;
     }
 
