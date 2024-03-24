@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 
-public class dialogtrue : MonoBehaviour
+public class dialogtru2 : MonoBehaviour
 {
     public dialow fer;
     private bool _stay;
@@ -13,7 +9,7 @@ public class dialogtrue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fer = FindObjectOfType<dialow>(true);
+        fer = FindObjectOfType<dialow>();
     }
 
     // Update is called once per frame
@@ -21,14 +17,13 @@ public class dialogtrue : MonoBehaviour
     {
         if (_stay && Input.GetKeyDown(KeyCode.X))
         {
-            Debug.Log("x");
             fer.next();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        fer.ShowText("нектозоветвас|привет Михаил");
+        fer.ShowText("некто зовет вас|привет Михаил");
         _stay = true;
     }
 
