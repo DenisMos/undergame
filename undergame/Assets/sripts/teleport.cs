@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class teleport : MonoBehaviour
+public class teleport: MonoBehaviour
 {
 
     public GameObject Destination;
@@ -13,14 +13,13 @@ public class teleport : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            StartCoroutine(Teleport());
+            Teleport();
         }
     }
 
 
-    IEnumerator Teleport()
+    private void Teleport()
     {
-        yield return new WaitForSeconds(0.5f);
         Player.transform.position = new Vector2(Destination.transform.position.x, Destination.transform.position.y);
     }
 
