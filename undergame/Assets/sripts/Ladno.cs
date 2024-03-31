@@ -8,7 +8,11 @@ public class Ladno : MonoBehaviour
 
     private void loo()
     {
-        ladn.color = new Color(1,0,0);
+        var red = Mathf.Cos(Time.time);
+        var green = Mathf.Cos(Time.time);
+
+        ladn.color = new Color(red,green,0);
+        
     }
 
     // Start is called before the first frame update
