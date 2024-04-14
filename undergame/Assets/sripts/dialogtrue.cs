@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 
@@ -7,6 +8,11 @@ public class dialogtrue : MonoBehaviour
     private bool _stay;
     public Color color=Color.blue;
     public Font font;
+
+    public bool OnlyOne;
+    private bool _only;
+
+    public string[] Messegas;
      
     // Start is called before the first frame update
     void Start()
@@ -19,16 +25,23 @@ public class dialogtrue : MonoBehaviour
     {
         if (_stay && Input.GetKeyDown(KeyCode.X))
         {
-            Debug.Log("x");
             fer.next();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Проверка что код должен работать один раз
+        if (OnlyOne)
+        {
+            _only = true;
+        }
+        if (_only) return;
+      
+
         fer.dialogs.font = font;
         fer.pert.color = color;
-        fer.ShowText("некто зовет вас|привет Михаил");
+        fer.ShowText(Messegas.Aggregate((x,y) => $"{x}|{y}"));
         _stay = true;
     }
 

@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using UnityEditor.VersionControl;
+using Assets.sripts.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,9 +15,21 @@ public class dialow : MonoBehaviour
     public Image pert;
     public Text dialogs;
     public GameObject dialogPanel;
+
+
+    public bool BlockMove;
+    public GameObject Blockable;
+    private IBlockable _blockable;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (BlockMove)
+        {
+            _blockable = Blockable.GetComponent<IBlockable>();
+            if (_blockable == null) Debug.LogError("Не выбран объект блокировки.");
+        }
+
         gameObject.SetActive(true);
        StopText();
     }
@@ -48,6 +58,11 @@ public class dialow : MonoBehaviour
     { 
         StopAllCoroutines();
 
+        if (BlockMove)
+        {
+            _blockable.Block();
+        }
+
         dialogPanel.SetActive(true);
 
         messet = message.Split('|');
@@ -57,12 +72,18 @@ public class dialow : MonoBehaviour
         messegeShow = messet[_pointer];
 
 
+
         StartCoroutine(nameof(sendtext));
     }
 
     public void StopText()
     {
         StopAllCoroutines();
+
+        if (BlockMove)
+        {
+            _blockable.Unblock();
+        }
 
         dialogs.text = string.Empty;
 

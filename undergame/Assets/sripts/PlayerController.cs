@@ -1,12 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.sripts.Interfaces;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IBlockable
 {
     public float moveSpeed = 5f;
     private Animator animator;
     private Rigidbody2D rb;
+
+    private bool block;
+
+    public void Block()
+    {
+        block = true;
+        rb.velocity = Vector3.zero;
+    }
+
+    public void Unblock()
+    {
+        block = false;
+    }
 
     private void Start()
     {
@@ -16,6 +30,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        //Если персонаж заблокирован.
+        if (block) return;
+
         // Перемещение персонажа
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
