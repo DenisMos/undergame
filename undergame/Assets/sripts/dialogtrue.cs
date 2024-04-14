@@ -23,7 +23,7 @@ public class dialogtrue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_stay && Input.GetKeyDown(KeyCode.X))
+        if (_stay && Input.GetKeyDown(KeyCode.G))
         {
             fer.next();
         }
