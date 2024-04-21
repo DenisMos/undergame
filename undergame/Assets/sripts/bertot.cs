@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class bertot : MonoBehaviour
 {  
-private bool _stay;
-public bool _act;
-    public GameObject[] Target;
     public SpriteRenderer SpriteRenderer;
 
 
