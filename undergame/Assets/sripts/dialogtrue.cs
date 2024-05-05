@@ -17,7 +17,7 @@ public class dialogtrue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fer = FindObjectOfType<dialow>(true);
+        //fer = FindObjectOfType<dialow>(true);
     }
 
     // Update is called once per frame
