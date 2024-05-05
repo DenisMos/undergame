@@ -9,6 +9,11 @@ public class teleport: MonoBehaviour
     public GameObject Destination;
     public GameObject Player;
 
+    public void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
