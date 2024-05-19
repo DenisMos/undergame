@@ -59,13 +59,13 @@ public class PlayerController : MonoBehaviour, IBlockable
         }
         if (moveVertical == 0 && moveHorizontal == 0)
         {
-            animator.Play("run_idle");
+            animator.Play("Menu player");
         }
         if (moveVertical < 0)
         {
             if (moveHorizontal > 0)
             {
-                animator.Play("move");
+                animator.Play("Menu player");
             }
         }
         
